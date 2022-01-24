@@ -1,0 +1,26 @@
+.bg-light {
+    background-image: url(../assets/img/bcat.png);
+    }
+
+nav {
+    box-shadow: 0 0 30px 0 $clarito;
+    }    
+
+.navbar-light .navbar-nav .nav-link {
+    background: rgb(204, 204, 204); 
+    background: rgba(204, 204, 204, 0.5);
+    color: $violeta-oscuro;
+    border-radius: 15px;
+    padding: 10px;
+    margin: auto 10px;
+    font: 700 1.8rem $font;
+    &:hover {
+        color: $lila;
+        }
+    }
+
+.border {
+    @include borders;
+    }
+
+

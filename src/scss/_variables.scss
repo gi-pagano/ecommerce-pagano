@@ -1,0 +1,13 @@
+//paleta//
+$violeta-oscuro: #01012b;
+$clarito: #d1f7ff;
+$lila: #8877a3;
+
+
+//font
+$font: 'Outfit', sans-serif;
+
+//mixins
+@mixin borders {
+	border-radius: 15px;
+}
