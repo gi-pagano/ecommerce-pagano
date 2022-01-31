@@ -1,25 +1,38 @@
-import Item from "../item/item";
+import Item from "../item/Item";
+import { useEffect, useState } from "react";
+import { productsAPI } from "../../helpers/promises";
 
-const productos = [
-    { id: "1", name: "Spider-Man", price: "12000" },
-    { id: "2", name: "Wolverine", price: "11000" },
-    { id: "3", name: "Black Widow", price: "13000" },
-    { id: "4", name: "Batman", price: "10000" },
-];
+const ProductList = () => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-const ListaProductos = () => {
+    useEffect(() => {
+        getProducts();
+    }, []);
+
+    const getProducts = async () => {
+        try {
+            const result = await productsAPI;
+            setProducts(result);
+        } catch (error) {
+            console.log({ error });
+        } finally {
+        setLoading(false);
+        }
+
+    };
+    if (loading) {
+        return <h1>Cargando...</h1>;
+    }
+
     return (
-        <div>
-            {productos.map(({ id, name, price }) => (
-            <Item
-                key={id}
-                id={id}
-                name={name}
-                price={price}
-            />
+        <div className="products-layout">
+            {products.map((product) => (
+            <Item key={product.id} {...product} />
             ))}
         </div>
     );
 };
 
-export default ListaProductos;
+
+export default ProductList;
