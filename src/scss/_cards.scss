@@ -1,24 +1,92 @@
 .products-layout {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
+    margin: 20px 50px;
 }
 
 .card {
     display: flex;
-    flex-direction: row;
-    width: 40%;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-}
-
-.card-img {
-    width: 60%;
-}
-
-.card-body {
-    display: flex;
+    background-color: $lila;
     flex-direction: column;
-    background-color: $violeta-oscuro;
+    width: 20%;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 5px 10px 10px $clarito;
+    &:hover{
+        transform: scale(1.1);
+    }
+    .card-img {
+        border-radius: 5px;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card-body-layout {
+            display: flex;
+            flex-direction: column;
+            h3 {
+                color: $clarito;
+            }
+            p {
+                color: $clarito;
+                font-size: 1.5rem;
+            }
+            button {
+                background-color: $violeta-oscuro;
+                color: $clarito;
+                border: none;
+                border-radius: 10px;
+                padding: 5px;
+                font-size: 1rem;
+                margin: auto 10px;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+
+.detail-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    background-color: $lila;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px $clarito;
+    .detail-info {
+        display: flex;
+        flex-direction: column;
+        .detail-name {
+            color: $clarito;
+            display: flex;
+            flex-direction: row;
+        }
+        .detail-description {
+            color: $clarito;
+            font-size: 1.2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            .detail-btns {
+                display: flex;
+                flex-direction: row;
+                background-color: $violeta-oscuro;
+                color: $clarito;
+                border: none;
+                border-radius: 10px;
+                padding: 5px;
+                font-size: 1rem;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }    
+    }
 }

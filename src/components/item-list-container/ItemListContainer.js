@@ -1,8 +1,10 @@
-import Item from "../item/Item";
+
 import { useEffect, useState } from "react";
 import { productsAPI } from "../../helpers/promises";
+import ProductList from "./item-list/ItemList";
+import BSpinner from "../spinner/Spinner";
 
-const ProductList = () => {
+const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -21,18 +23,14 @@ const ProductList = () => {
         }
 
     };
-    if (loading) {
-        return <h1>Cargando...</h1>;
-    }
 
-    return (
-        <div className="products-layout">
-            {products.map((product) => (
-            <Item key={product.id} {...product} />
-            ))}
+    return ( 
+
+        <div>
+            { loading ? <BSpinner/> : <ProductList products={products} /> }
         </div>
     );
-};
 
+}  
 
-export default ProductList;
+export default ItemListContainer;

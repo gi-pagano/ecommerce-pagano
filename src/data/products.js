@@ -1,13 +1,4 @@
-import cap from '../assets/img/products/cap.jpg';
-import clint from '../assets/img/products/clint.jpg';
-import ivy from '../assets/img/products/ivy.jpg';
-import joker from '../assets/img/products/joker.jpg';
-import loki from '../assets/img/products/loki.jpg';
-import magneto from '../assets/img/products/magneto.jpg';
-import raven from '../assets/img/products/raven.jpg';
-import rogue from '../assets/img/products/rogue.jpg';
-import wanda from '../assets/img/products/wanda.jpg';
-import wolverine from '../assets/img/products/wolverine.jpg';
+
 
 export const products = [
     {
@@ -17,7 +8,8 @@ export const products = [
         price: 30000,
         stock: 3, 
         brand: "Figma",
-        image: cap,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/cap_yk0fso.jpg",
+        category: "avengers",
     },
     {
         id: "2", 
@@ -26,7 +18,8 @@ export const products = [
         price: 15000,
         stock: 5, 
         brand: "Figuarts",
-        image: clint,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/clint_qzbktp.jpg",
+        category: "avengers",
     },   
     {
         id: "3", 
@@ -35,7 +28,8 @@ export const products = [
         price: 28000,
         stock: 2, 
         brand: "Kotobukiya",
-        image: ivy,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/ivy_y0zex0.jpg",
+        category: "dc",
     },
     {
         id: "4", 
@@ -44,7 +38,8 @@ export const products = [
         price: 22000,
         stock: 5, 
         brand: "Figma",
-        image: joker,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101320/joker_azjvyd.jpg",
+        category: "dc",
     },   
     {
         id: "5", 
@@ -53,7 +48,8 @@ export const products = [
         price: 25000,
         stock: 8, 
         brand: "Figma",
-        image: loki,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185978/loki_va15q4.jpg",
+        category: "avengers",
     },
     {
         id: "6", 
@@ -62,7 +58,8 @@ export const products = [
         price: 14000,
         stock: 6, 
         brand: "Figuarts",
-        image: magneto,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101320/magneto_szbyan.jpg",
+        category: "xmen",
     },   
     {
         id: "7", 
@@ -71,7 +68,8 @@ export const products = [
         price: 27000,
         stock: 4, 
         brand: "Kotobukiya",
-        image: raven,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/raven_pt6pns.jpg",
+        category: "dc",
     },
     {
         id: "8", 
@@ -80,7 +78,8 @@ export const products = [
         price: 40000,
         stock: 6, 
         brand: "Good Smile",
-        image: rogue,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/rogue_tn78ka.jpg",
+        category: "xmen",
     },   
     {
         id: "9", 
@@ -89,7 +88,8 @@ export const products = [
         price: 22000,
         stock: 7, 
         brand: "Kotobukiya",
-        image: wanda,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/wanda_q59mvi.jpg",
+        category: "avengers",
     },
     {
         id: "10", 
@@ -98,6 +98,7 @@ export const products = [
         price: 17000,
         stock: 9, 
         brand: "Figuarts",
-        image: wolverine,
+        image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101689/wolverine_fb1ary.jpg",
+        category: "xmen",
     },   
 ];

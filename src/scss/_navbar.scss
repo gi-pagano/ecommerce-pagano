@@ -21,6 +21,11 @@ nav {
 
 .border {
     @include borders;
-    }
+}
 
+.spinner-border {
+    width: 100px; 
+    height: 100px;
+    margin: 50px auto;
+}
 
