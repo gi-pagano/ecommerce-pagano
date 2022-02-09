@@ -21,10 +21,10 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#link">Todos</Nav.Link>
-                        <Nav.Link href="#link">Avengers</Nav.Link>
-                        <Nav.Link href="#link">X-Men</Nav.Link>
-                        <Nav.Link href="#link">DC</Nav.Link>
+                        <NavLink className="navlink" to="/"> Todos</NavLink>
+                        <NavLink className="navlink" to="category/avengers">Avengers</NavLink>
+                        <NavLink className="navlink" to="category/xmen">X-Men</NavLink>
+                        <NavLink className="navlink" to="category/dc">DC</NavLink>
                     </Nav>
                 </Navbar.Collapse>
                 <CartWidget />

@@ -1,43 +1,52 @@
 
-/*import { Link } from 'react-router-dom'*/
+import { Link } from 'react-router-dom'
 import ItemCount from '../../item-count/ItemCount'
+import { Carousel } from 'react-bootstrap'
+import { useState } from 'react'
+import AddToCart from '../../cart-icon/AddToCart'
 
 
-const ItemDetail = () => {
+const ItemDetail = ( {product}) => {
 
-    const cap =
-{
-    id: "1", 
-    name: "Captain America", 
-    description: "Figura del Capitán América de Marvel Avengers", 
-    price: 30000,
-    stock: 3, 
-    brand: "Figma",
-    image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/cap_yk0fso.jpg",
-    category: "avengers",
-};
+    const { name, description, price, stock, brand, image, image2 } = product
 
-    const { name, description, price, stock, brand, image } = cap
+    const [show, setShow] = useState(true)
+    
+    const onAdd = () => {
+        setShow(false)
+    }
+
 
     return (
         <div>
             <div className="detail-layout">
-                <img src={image} alt={name} />
+                <Carousel fade className="carousel-size">
+                    <Carousel.Item>
+                        <img
+                        className="d-block"
+                        src={image}
+                        alt={name}
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block"
+                        src={image2}
+                        alt={name}
+                        />
+                    </Carousel.Item>
+                </Carousel>
                 <div className="detail-info">
-                    <div className="detail-name">
-                        <h2>{name}</h2>
-                        <h3>$ {price}</h3>
-                    </div>
-                    <div className="detail-description">    
-                        <p>{description}</p>
-                        <p>{brand}</p>
-                        <p>Quedan: {stock} unidades</p>
-                        <ItemCount stock={stock} /> :
-                        {/*<div className="detail-btns">
-                            <Link to='/cart'><button>Ver tu carrito</button></Link>
-                            <Link to='/'><button>Seguir Comprando</button></Link>
-                        </div>*/}
-                    </div>
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                    <h3>$ {price}</h3>
+                    <p>{brand}</p>
+                    <p>{stock} unidades disponibles</p>
+                    {show ? <div><ItemCount stock={stock}/> <button onClick={onAdd}><AddToCart/></button></div> :
+                    <div className="detail-btns">
+                        <Link to='/cart'><button>Finalizar compra</button></Link>
+                        <Link to='/'><button>Seguir Comprando</button></Link>
+                    </div> }
                 </div>
             </div>
         </div>

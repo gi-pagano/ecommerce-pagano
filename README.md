@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+
+
+# E-commerce de figuras coleccionables de comics creado por Giselle Pagano usando React
+
+Se utilizan imagenes subidas a la nube.
+
+Se utilizaron las siguientes dependencias externas:
+
+### Bootstrap
+
+Para instalar utilizar el comando:
+
+npm install react-bootstrap bootstrap@5.1.3
+
+### React Icons
+
+Para instalar utilizar el comando:
+
+npm install react-icons --save
+
+-----------------------------------------------------------------------------------------------------------------------------
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -14,7 +14,7 @@
     border-radius: 20px;
     padding: 10px;
     margin: 20px;
-    box-shadow: 5px 10px 10px $clarito;
+    box-shadow: 3px 5px 5px $clarito;
     &:hover{
         transform: scale(1.1);
     }
@@ -51,42 +51,57 @@
     }
 }
 
+.details {
+    margin: 50px auto;
+    width: 70%;
+}
+
 
 .detail-layout {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 70%;
+
+    justify-content: space-evenly;
     background-color: $lila;
     border-radius: 20px;
     box-shadow: 5px 10px 10px $clarito;
+    padding: 10px;
+    .carousel-size {
+        width: 600px;
+        height: 600px;
+    }
     .detail-info {
         display: flex;
         flex-direction: column;
-        .detail-name {
+        justify-content: space-around;
+        h2 {
+            font: 700 3rem $font;
+            color: $violeta-oscuro;
+        }
+        h3 {
+            font: 700 2rem $font;
             color: $clarito;
+        }
+        p {
+            font: 500 1.5rem $font;
+            color: $clarito;
+        }
+        button {
+            background-color: $violeta-oscuro;
+            color: $clarito;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 2px;
+            font-size: 1.5rem;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        .detail-btns {
             display: flex;
             flex-direction: row;
-        }
-        .detail-description {
-            color: $clarito;
-            font-size: 1.2rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            .detail-btns {
-                display: flex;
-                flex-direction: row;
-                background-color: $violeta-oscuro;
-                color: $clarito;
-                border: none;
-                border-radius: 10px;
-                padding: 5px;
-                font-size: 1rem;
-                &:hover {
-                    opacity: 0.5;
-                }
-            }
+            justify-content: space-between;
         }    
     }
 }

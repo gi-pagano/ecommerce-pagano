@@ -9,6 +9,7 @@ export const products = [
         stock: 3, 
         brand: "Figma",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/cap_yk0fso.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387551/cap2_ldh9o9.jpg",
         category: "avengers",
     },
     {
@@ -19,6 +20,7 @@ export const products = [
         stock: 5, 
         brand: "Figuarts",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/clint_qzbktp.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387551/clint2_vnfme6.jpg",
         category: "avengers",
     },   
     {
@@ -29,6 +31,7 @@ export const products = [
         stock: 2, 
         brand: "Kotobukiya",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185855/ivy_y0zex0.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387552/ivy2_qpauee.jpg",
         category: "dc",
     },
     {
@@ -39,6 +42,7 @@ export const products = [
         stock: 5, 
         brand: "Figma",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101320/joker_azjvyd.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101320/joker2_hnpzvs.jpg",
         category: "dc",
     },   
     {
@@ -49,6 +53,7 @@ export const products = [
         stock: 8, 
         brand: "Figma",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185978/loki_va15q4.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387551/loki2_ewvzix.jpg",
         category: "avengers",
     },
     {
@@ -59,6 +64,7 @@ export const products = [
         stock: 6, 
         brand: "Figuarts",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101320/magneto_szbyan.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387551/magneto2_vylphj.jpg",
         category: "xmen",
     },   
     {
@@ -69,6 +75,7 @@ export const products = [
         stock: 4, 
         brand: "Kotobukiya",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/raven_pt6pns.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387552/raven2_ok99rd.jpg",
         category: "dc",
     },
     {
@@ -79,6 +86,7 @@ export const products = [
         stock: 6, 
         brand: "Good Smile",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/rogue_tn78ka.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387552/rogue2_tvvpgp.jpg",
         category: "xmen",
     },   
     {
@@ -89,6 +97,7 @@ export const products = [
         stock: 7, 
         brand: "Kotobukiya",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644185979/wanda_q59mvi.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644387552/wanda2_lziasp.jpg",
         category: "avengers",
     },
     {
@@ -99,6 +108,7 @@ export const products = [
         stock: 9, 
         brand: "Figuarts",
         image: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101689/wolverine_fb1ary.jpg",
+        image2: "https://res.cloudinary.com/gicloud1433/image/upload/v1644101321/wolverine2_fhcmif.jpg",
         category: "xmen",
     },   
 ];

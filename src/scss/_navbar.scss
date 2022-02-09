@@ -4,15 +4,20 @@
 
 nav {
     box-shadow: 0 0 30px 0 $clarito;
+    a {
+        text-decoration: none;
+    }
     }    
 
-.navbar-light .navbar-nav .nav-link {
+.navlink {
     background: rgb(204, 204, 204); 
     background: rgba(204, 204, 204, 0.5);
     color: $violeta-oscuro;
     border-radius: 15px;
     padding: 10px;
     margin: auto 10px;
+    text-shadow: 3px 3px 2px $lila;
+    box-shadow: 2px 2px 5px 0 $lila;
     font: 700 1.8rem $font;
     &:hover {
         color: $lila;

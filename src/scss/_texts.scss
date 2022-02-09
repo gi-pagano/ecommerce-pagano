@@ -2,6 +2,7 @@ h1 {
     font: 700 3rem $font;
     color: $clarito;
     margin-top: 2em;
+    text-shadow: 3px 3px 2px $lila;
     } 
 
 h2 {
@@ -9,11 +10,6 @@ h2 {
     color: $clarito;
     margin-top: 1em;
 }     
-
-.counter {
-    font: 1.5rem $font;
-    color: $clarito;
-}
 
 .footer {
     background-color: $lila;

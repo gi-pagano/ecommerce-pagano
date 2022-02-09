@@ -1,0 +1,25 @@
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .counter-btn {
+        background-color: $violeta-oscuro;
+        color: $clarito;
+        border: none;
+        border-radius: 10px;
+        padding: 2px 5px;
+        font-size: 2rem;
+        margin: auto 10px !important;
+        width: 50px;
+        height: 50px;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .counter-txt {
+        font: 700 2rem $font;
+        color: $clarito;
+        align-self: center;
+    }
+
+}
