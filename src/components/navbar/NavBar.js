@@ -4,6 +4,7 @@ import CartWidget from "../cart-icon/CartWidget";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
+
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -27,7 +28,9 @@ const NavBar = () => {
                         <NavLink className="navlink" to="category/dc">DC</NavLink>
                     </Nav>
                 </Navbar.Collapse>
-                <CartWidget />
+                <NavLink to="/cart">
+                    <CartWidget />
+                </NavLink>    
             </Container>
         </Navbar>
     );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import AddToCart from '../cart-icon/AddToCart'
 
-const ItemCounter = ({ stock }) => {
+const ItemCounter = ({ stock, onAdd }) => {
     const [counter, setCounter] = useState(1);
 
     const minus = () => {
@@ -19,6 +20,7 @@ const ItemCounter = ({ stock }) => {
                 <button className="counter-btn" onClick={minus}>-</button>
                 <span className="counter-txt">{counter}</span>
                 <button className="counter-btn" onClick={plus}>+</button>
+                <button onClick={() => onAdd(counter)}><AddToCart/></button>
             </div>
         </>
     );

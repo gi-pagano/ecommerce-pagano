@@ -28,6 +28,19 @@ nav {
     @include borders;
 }
 
+.active {
+    font-weight: 900;
+}
+
+.cart-icon {
+    filter: drop-shadow(0 0 5px $violeta-oscuro);
+    color: $clarito;
+    font-size: 30px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
 .spinner-border {
     width: 100px; 
     height: 100px;

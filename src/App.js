@@ -4,13 +4,16 @@ import './App.css';
 import './scss/styles.scss'; 
 import Routes from './routes/Routes';
 import Footer from './components/footer/Footer';
+import { CartProvider } from './context/CartContext';
 
 function App() {
 
     return (
         <>
           <div className="App">
-            <Routes />
+            <CartProvider>
+              <Routes />
+            </CartProvider>
             <Footer />
           </div>
         </>

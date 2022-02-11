@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom'
 import ItemCount from '../../item-count/ItemCount'
 import { Carousel } from 'react-bootstrap'
-import { useState } from 'react'
-import AddToCart from '../../cart-icon/AddToCart'
+import { /*useContext,*/ useState } from 'react'
+/*import { CartContext } from '../../../context/CartContext'*/
 
 
 const ItemDetail = ( {product}) => {
@@ -11,11 +11,12 @@ const ItemDetail = ( {product}) => {
     const { name, description, price, stock, brand, image, image2 } = product
 
     const [show, setShow] = useState(true)
-    
-    const onAdd = () => {
-        setShow(false)
-    }
 
+    const onAdd = ( counter ) => {
+        console.log({...product, quantity: counter})
+        setShow(false)
+
+    }
 
     return (
         <div>
@@ -42,7 +43,7 @@ const ItemDetail = ( {product}) => {
                     <h3>$ {price}</h3>
                     <p>{brand}</p>
                     <p>{stock} unidades disponibles</p>
-                    {show ? <div><ItemCount stock={stock}/> <button onClick={onAdd}><AddToCart/></button></div> :
+                    {show ? <ItemCount stock={stock} onAdd={onAdd} /> : 
                     <div className="detail-btns">
                         <Link to='/cart'><button>Finalizar compra</button></Link>
                         <Link to='/'><button>Seguir Comprando</button></Link>

@@ -13,8 +13,8 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         productsAPI
             .then(res => setProduct(res.find(prod => prod.id === id)))
+    }, [id] )
 
-    }, [id])
 
     return (
         <div className="details">
