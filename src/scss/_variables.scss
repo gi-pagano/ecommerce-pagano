@@ -11,3 +11,16 @@ $font: 'Outfit', sans-serif;
 @mixin borders {
 	border-radius: 15px;
 }
+
+@mixin btn {
+	background-color: $violeta-oscuro;
+	color: $clarito;
+	border: none;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 1rem;
+	margin: 1px 10px;
+	&:hover {
+		opacity: 0.5;
+	}
+}

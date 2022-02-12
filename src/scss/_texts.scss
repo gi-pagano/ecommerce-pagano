@@ -9,7 +9,26 @@ h2 {
     font: 2rem $font;
     color: $clarito;
     margin-top: 1em;
-}     
+}  
+
+.cart-title {
+    font: 500 2.5rem $font;
+    color: $clarito;
+    margin-top: 2em;
+    text-shadow: 3px 3px 2px $lila;
+}
+
+h3 {
+    font: 2rem $font;
+    color: $clarito;
+    margin-top: 1em; 
+}
+
+li {
+    font: 1.5rem $font;
+    color: $clarito;
+    margin-top: 1em;
+}
 
 .footer {
     background-color: $lila;

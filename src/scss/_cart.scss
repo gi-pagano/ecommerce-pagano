@@ -1,0 +1,14 @@
+ul {
+    list-style-type: none;
+}
+
+.cart-items {
+    button {
+    @include btn;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: $lila;
+    box-shadow: 2px 3px 3px $clarito;
+    margin: 10px 5px;
+    }
+}

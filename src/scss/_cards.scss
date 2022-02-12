@@ -25,27 +25,24 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        button {
+            @include btn;
+            padding: 10px;
+            font-size: 1.5rem;
+            box-shadow: 1px 1px 1px $clarito;
+            }
         .card-body-layout {
             display: flex;
             flex-direction: column;
             h3 {
                 color: $clarito;
+                text-shadow: 1px 1px 1px $violeta-oscuro;
             }
             p {
                 color: $clarito;
                 font-size: 1.5rem;
-            }
-            button {
-                background-color: $violeta-oscuro;
-                color: $clarito;
-                border: none;
-                border-radius: 10px;
-                padding: 5px;
-                font-size: 1rem;
-                margin: auto 10px;
-                &:hover {
-                    opacity: 0.5;
-                }
+                text-shadow: 1px 1px 1px $violeta-oscuro
             }
         }
     }
@@ -60,7 +57,6 @@
 .detail-layout {
     display: flex;
     flex-direction: row;
-
     justify-content: space-evenly;
     background-color: $lila;
     border-radius: 20px;
@@ -77,6 +73,7 @@
         h2 {
             font: 700 3rem $font;
             color: $violeta-oscuro;
+            text-shadow: 1px 1px 1px $clarito;
         }
         h3 {
             font: 700 2rem $font;

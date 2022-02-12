@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom'
 import ItemCount from '../../item-count/ItemCount'
 import { Carousel } from 'react-bootstrap'
-import { /*useContext,*/ useState } from 'react'
-/*import { CartContext } from '../../../context/CartContext'*/
+import { useContext, useState } from 'react'
+import { CartContext } from '../../../context/CartContext'
 
 
 const ItemDetail = ( {product}) => {
@@ -12,11 +12,13 @@ const ItemDetail = ( {product}) => {
 
     const [show, setShow] = useState(true)
 
-    const onAdd = ( counter ) => {
-        console.log({...product, quantity: counter})
-        setShow(false)
+    const { addItem } = useContext(CartContext)
 
+    const onAdd = ( counter ) => {
+        addItem({ ...product, quantity: counter })
+        setShow(false)
     }
+
 
     return (
         <div>
