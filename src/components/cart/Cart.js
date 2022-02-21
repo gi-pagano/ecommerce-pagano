@@ -19,6 +19,7 @@ const Cart = () => {
                         ))}
                     </ul>
                     <h3>Total = $ {totalSum}</h3>
+
                     <button>Comprar</button>
                     <button onClick={emptyCart}>Vaciar carrito</button>
                 </div>

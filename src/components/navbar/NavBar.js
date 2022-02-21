@@ -1,9 +1,15 @@
 import { Container, Nav, Navbar} from "react-bootstrap";
+import { useContext } from "react";
 import logo from '../../assets/img/logo.png';
 import CartWidget from "../cart-icon/CartWidget";
 import { Link, NavLink } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const NavBar = () => {
+
+    const { items } = useContext(CartContext);
+
+    const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
         <Navbar bg="light" expand="lg">
@@ -30,7 +36,8 @@ const NavBar = () => {
                 </Navbar.Collapse>
                 <NavLink to="/cart">
                     <CartWidget />
-                </NavLink>    
+                </NavLink>
+                {totalQuantity > 0 && <span className="cart_count">{totalQuantity}</span>}    
             </Container>
         </Navbar>
     );
