@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import { productsAPI } from "../../helpers/promises";
 import BSpinner from "../spinner/Spinner";
 import ProductList from "./item-list/ItemList";
-//import { collection, getDocs, doc, getDoc, getFirestore, limit, query, where } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = () => {
@@ -13,36 +12,31 @@ const ItemListContainer = () => {
     const { categoryId } = useParams();
 
     useEffect(() => {
-
         
-        /*
         const db = getFirestore();
 
-        const itemCollection = collection(db, 'products');
-
-        getDocs(itemCollection).then((snapshot) => {
-            setProducts(snapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data() 
-            })))
-            console.log(snapshot.docs)
-            setLoading(false)
-        })
-
-    }, [])*/
-
+        const itemCollection = collection(db, 'items');
 
         if (categoryId) {
-            productsAPI
-                .then(res => setProducts(res.filter(prod => prod.category === categoryId)))
-                .finally(() => setLoading(false))
+            const itemQuery = query(itemCollection, where('category', '==', categoryId));
+            getDocs(itemQuery).then((snapshot) => {
+                setProducts(snapshot.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id
+                })))
+                setLoading(false)
+            })
         } else {
-            productsAPI
-                .then(res => setProducts(res))
-                .finally(() => setLoading(false))
+            getDocs(itemCollection).then((snapshot) => {
+                setProducts(snapshot.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id
+                })))
+                setLoading(false)
+            })
         }
-
     }, [categoryId])
+
 
     return (
         <div>

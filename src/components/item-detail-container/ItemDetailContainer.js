@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productsAPI } from "../../helpers/promises";
 import ItemDetail from "./item-detail/ItemDetail";
+import { doc, getFirestore, getDoc } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
@@ -11,10 +11,19 @@ const ItemDetailContainer = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        productsAPI
-            .then(res => setProduct(res.find(prod => prod.id === id)))
-    }, [id] )
 
+        const db = getFirestore();
+
+        const docRef = doc(db, "items", id);
+
+        getDoc(docRef).then((snapshot) => {
+            setProduct(({
+                id: snapshot.id,
+                ...snapshot.data()
+            }))
+        })
+    }, [id])
+    
 
     return (
         <div className="details">
