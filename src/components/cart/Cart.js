@@ -1,11 +1,21 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import MyForm from "../form/Form";
 
 const Cart = () => {
     const { items, removeItem, emptyCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
 
     const totalSum = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+    const [show, setShow] = useState(false);
+
+    const displayMyForm = () => {
+        setShow(!show);
+    }
+
+
+    
 
     return (
         <div>
@@ -20,8 +30,9 @@ const Cart = () => {
                     </ul>
                     <h3>Total = $ {totalSum}</h3>
 
-                    <button>Comprar</button>
+                    <button onClick={displayMyForm}>Finalizar compra</button>
                     <button onClick={emptyCart}>Vaciar carrito</button>
+                    {show ? <MyForm /> : null}
                 </div>
             ) : (
                 <div className="cart-items">
