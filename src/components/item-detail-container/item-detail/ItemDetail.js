@@ -45,11 +45,13 @@ const ItemDetail = ( {product}) => {
                     <h3>$ {price}</h3>
                     <p>{brand}</p>
                     <p>{stock} unidades disponibles</p>
-                    {show ? <ItemCount stock={stock} onAdd={onAdd} /> : 
-                    <div className="detail-btns">
-                        <Link to='/cart'><button>Finalizar compra</button></Link>
-                        <Link to='/'><button>Seguir Comprando</button></Link>
-                    </div> }
+                    {stock > 0 ?
+                    show ? <ItemCount stock={stock} onAdd={onAdd} /> : 
+                        <div className="detail-btns">
+                            <Link to='/cart'><button>Finalizar compra</button></Link>
+                            <Link to='/'><button>Seguir Comprando</button></Link>
+                        </div> : 
+                    <p>Sin stock</p> }
                 </div>
             </div>
         </div>
