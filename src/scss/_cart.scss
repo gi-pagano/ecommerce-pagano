@@ -2,6 +2,25 @@ ul {
     list-style-type: none;
 }
 
+.cart-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-container {
+    width: 80%;
+    background-color: rgb(92, 85, 97);
+    border-radius: 10px;
+    box-shadow: 2px 5px 5px gray;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+
 .cart-items {
     button {
     @include btn;
@@ -9,6 +28,59 @@ ul {
     font-weight: 500;
     background-color: $lila;
     box-shadow: 2px 3px 3px $clarito;
-    margin: 10px 5px;
+    margin: 20px;
     }
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+    justify-content: center;
+}
+
+.cart-item-image {
+    width: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    margin: 5px;
+}
+
+.cart-item-name {
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.cart-item-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    justify-content: space-between;
+    h3 {
+        font-size: 1.4rem;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+.price {
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+.line {
+    border-top: 2px solid $clarito;
+    padding-top: 8px;
 }
